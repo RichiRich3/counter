@@ -7,12 +7,21 @@ p {
   text-align: center;
   font-size: 60px;
   margin-top: 0px;
-  color:rgb(99, 100, 201);
+  color:rgb(255, 255, 255);
   padding-top: 15%;
 }
 </style>
 </head>
-<body background="red">
+
+<body style=" background-image: url('https://thumbs.gfycat.com/EvergreenExemplaryBoa-size_restricted.gif');
+background-size: cover;
+
+
+
+height: 50vh;
+padding:0;
+margin:0;
+">
 <p id="demo"></p>
 <script>
 var countDownDate = new Date("Sep 5, 2022 17:30:00").getTime();
@@ -23,11 +32,11 @@ var x = setInterval(function() {
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  document.getElementById("demo").innerHTML = "<b>"+ "Time left before kiss"+  "<br />" +"😙" +  "<br />" + "T - " +days + " Days " + hours + " Hours "
+  document.getElementById("demo").innerHTML = "<b>"+ "Time left before kisses"+  "<br />" +"😙" +  "<br />" + "T - " +days + " Days " + hours + " Hours "
   + minutes + " Minutes " + seconds + " Seconds " +"<br />"+" or <br />"+  parseInt(distance/1000);
   if (countDownDate < now) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "Congratulations, and if it does't happen try once more";
+    document.getElementById("demo").innerHTML = "<b>" +"Congratulations, and if it does't happen try once more";
   }
 }, 1000);
 </script>
