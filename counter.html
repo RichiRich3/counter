@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+p {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+  color:rgb(99, 100, 201);
+  padding-top: 15%;
+}
+</style>
+</head>
+<body background="red">
+<p id="demo"></p>
+<script>
+var countDownDate = new Date("Sep 5, 2022 17:30:00").getTime();
+var x = setInterval(function() {
+  var now = new Date().getTime();
+  var distance = Math.abs( now -countDownDate);
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  document.getElementById("demo").innerHTML = "<b>"+ "Time left before kiss"+  "<br />" +"😙" +  "<br />" + "T - " +days + " Days " + hours + " Hours "
+  + minutes + " Minutes " + seconds + " Seconds " +"<br />"+" or <br />"+  parseInt(distance/1000);
+  if (countDownDate < now) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Congratulations, and if it does't happen try once more";
+  }
+}, 1000);
+</script>
+</body>
+</html>
